@@ -1,0 +1,32 @@
+{
+  "name": "cypress_project",
+  "version": "1.0.0",
+  "description": "testing application using cypress ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser:chrome": "npx cypress run --browser=chrome --headed --spec cypress/e2e/Hooks.cy.js --reporter mocha-allure-reporter --reporter-options allureResultsPath=allure-results",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "cypress-dashboard-run": "npx cypress run --record --key d1f624b8-9364-4969-9cdd-225781445644"
+  },
+  "author": "Shreya Akole",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/grep": "^4.1.0",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.32.0",
+    "chai": "^5.1.2",
+    "cypress": "^14.0.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "fast-csv": "^5.0.2",
+    "fs": "^0.0.1-security",
+    "xlsx": "^0.18.5"
+  }
+}
